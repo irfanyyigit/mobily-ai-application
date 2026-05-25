@@ -1,0 +1,25 @@
+#sımdı burada amac 
+#azalan adetler için acil sipariş verilmesi gereken ürünler 
+#ai talep öngörü sistemi burada amac urun yeterliliği, ürün talep oranı, son aylarda yasanan yukselıs veya dususu gözlemlemek 
+# tahmını guven skoru, Gelecek Ay Beklenen Talep, stok durumunu guncel olarak gostermesi
+#satın alma önerilerinde yapay zeka bize burada öneriler sunuyor önerilen sıparıs mıktarı ve sipariş dongusu veriyor
+#kurulabilecek bazı senaryolarda talep ve urun yeterliliğinın nasıl olacagına daır tahminlerde bulunması özellikle dugun ve bayramm sezonlarında da talebin artrmasını da baz alır
+#envanter stratejısınde de urunleri ABC olarak gruplandırır A-degerli B-orta segment C-düşük segment olarak verilir urunleri stok durumuna ve ürün bası fiyatına bakarak bize öngörülerde bulunur 
+ornegın yatak takımı var ve bunun degeri A ise bu bir kritik urundur ve bu durumda urun bitmesi demek de stok takıbının gunluk olarak yapılması gerekir 
+# finansal etki analizinde ise urune göre tahmını cıro (uygulamada onumuzdeki 3 ay için verildi) Ciro hesaplamak ve stoga baglı sermaye ile ürün basına sermaye ve stok durumuyla ilişkili olarak hesaplama yapmasıdır
+#gelecekte beklenen talebi ne kadar süre (veya ne oranda) karşılayabileceğini gösteren kritik bir lojistik metriğidir 
+#artık istenılen dosya sadece tek tıklama ile öngörüye alınır ve burada verilerin işlenmesi tek tıkla arka planda gerçekleştirilir daha sonra ekranda gösterilir
+|
+|
+|
+-yuzlerce urun var ve bunlara hergun bakmamız neredeyse ımkansıza yakın saglık skoru sayesınde de sistem algorıtması bizim yerımımize urunlerı tanıyor ve sadece saglık durumu
+kotuye giden urunler gosteriyor 
+#amac: yonetıcı zamanını verımlı kullanır 
+#gayrimenkula göre hesaplama da mobilya sektoru konut satıslarına %80 oranında baglıdır yeni ev demek daha fazla konut demektir
+#hava durumu endeksi magaza trafiği ılıman havalarda artar buna baglı olarak da cok sert hava kosulları bunu olumsuz etkiler buda insanları
+online olarak alısveriş yapmaya zorlar
+#EN ONEMLİ OZELLİK: dovız kuru artısına baglı satıslar kumas sunger ahsap dolarla birlikte geldiği için kur artısı da dogrudan fiyatlara
+etki eder 
+ARTIK BU UYGULAMA SAYESİNDE KONUT PİYASASINI MEVSİMSEL DEĞİŞİKLİKLERİ DE DOVİZ KURU ARTISINI DA HESAPLAR BUNLARA GÖRE EKRANDA VERİLERLE GOSTERİR
+mobilya sektörü doğası gereği aylık küçük dalgalanmalar (noise) içerir. Algoritmamız bu dalgalanmaları da hesaba katarak en gerçekçi projeksiyonu sunuyor. Ancak modelimiz kararlıdır; veriler değişmediği sürece öngörülerimiz sapma göstermez."
+
