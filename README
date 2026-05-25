@@ -1,25 +1,167 @@
-#sımdı burada amac 
-#azalan adetler için acil sipariş verilmesi gereken ürünler 
-#ai talep öngörü sistemi burada amac urun yeterliliği, ürün talep oranı, son aylarda yasanan yukselıs veya dususu gözlemlemek 
-# tahmını guven skoru, Gelecek Ay Beklenen Talep, stok durumunu guncel olarak gostermesi
-#satın alma önerilerinde yapay zeka bize burada öneriler sunuyor önerilen sıparıs mıktarı ve sipariş dongusu veriyor
-#kurulabilecek bazı senaryolarda talep ve urun yeterliliğinın nasıl olacagına daır tahminlerde bulunması özellikle dugun ve bayramm sezonlarında da talebin artrmasını da baz alır
-#envanter stratejısınde de urunleri ABC olarak gruplandırır A-degerli B-orta segment C-düşük segment olarak verilir urunleri stok durumuna ve ürün bası fiyatına bakarak bize öngörülerde bulunur 
-ornegın yatak takımı var ve bunun degeri A ise bu bir kritik urundur ve bu durumda urun bitmesi demek de stok takıbının gunluk olarak yapılması gerekir 
-# finansal etki analizinde ise urune göre tahmını cıro (uygulamada onumuzdeki 3 ay için verildi) Ciro hesaplamak ve stoga baglı sermaye ile ürün basına sermaye ve stok durumuyla ilişkili olarak hesaplama yapmasıdır
-#gelecekte beklenen talebi ne kadar süre (veya ne oranda) karşılayabileceğini gösteren kritik bir lojistik metriğidir 
-#artık istenılen dosya sadece tek tıklama ile öngörüye alınır ve burada verilerin işlenmesi tek tıkla arka planda gerçekleştirilir daha sonra ekranda gösterilir
-|
-|
-|
--yuzlerce urun var ve bunlara hergun bakmamız neredeyse ımkansıza yakın saglık skoru sayesınde de sistem algorıtması bizim yerımımize urunlerı tanıyor ve sadece saglık durumu
-kotuye giden urunler gosteriyor 
-#amac: yonetıcı zamanını verımlı kullanır 
-#gayrimenkula göre hesaplama da mobilya sektoru konut satıslarına %80 oranında baglıdır yeni ev demek daha fazla konut demektir
-#hava durumu endeksi magaza trafiği ılıman havalarda artar buna baglı olarak da cok sert hava kosulları bunu olumsuz etkiler buda insanları
-online olarak alısveriş yapmaya zorlar
-#EN ONEMLİ OZELLİK: dovız kuru artısına baglı satıslar kumas sunger ahsap dolarla birlikte geldiği için kur artısı da dogrudan fiyatlara
-etki eder 
-ARTIK BU UYGULAMA SAYESİNDE KONUT PİYASASINI MEVSİMSEL DEĞİŞİKLİKLERİ DE DOVİZ KURU ARTISINI DA HESAPLAR BUNLARA GÖRE EKRANDA VERİLERLE GOSTERİR
-mobilya sektörü doğası gereği aylık küçük dalgalanmalar (noise) içerir. Algoritmamız bu dalgalanmaları da hesaba katarak en gerçekçi projeksiyonu sunuyor. Ancak modelimiz kararlıdır; veriler değişmediği sürece öngörülerimiz sapma göstermez."
+# AI Tabanlı Talep Öngörü ve Akıllı Operasyon Merkezi
 
+Bu proje, Python ve Streamlit kullanılarak geliştirilmiş yapay zeka destekli bir operasyon ve stok analiz platformudur.
+
+Uygulama; yüklenen Excel verileri üzerinden:
+
+- Stok analizi yapar
+- Talep tahmini oluşturur
+- AI destekli satış projeksiyonu sunar
+- EOQ (Ekonomik Sipariş Miktarı) hesaplar
+- Finansal etki analizi yapar
+- Operasyonel sağlık skoru üretir
+- Akıllı satın alma önerileri sunar
+
+---
+
+# Özellikler
+
+- ✅ Excel tabanlı veri analizi
+- ✅ Yapay zeka destekli talep tahmini
+- ✅ Linear Regression modeli
+- ✅ EOQ hesaplama sistemi
+- ✅ Kritik stok analizi
+- ✅ Operasyonel sağlık skoru
+- ✅ Finansal etki analizi
+- ✅ AI satın alma takvimi
+- ✅ Plotly grafik desteği
+- ✅ Streamlit web arayüzü
+
+---
+
+# Kullanılan Teknolojiler
+
+- Python
+- Streamlit
+- Pandas
+- NumPy
+- Scikit-learn
+- Plotly
+
+---
+
+# Proje Dosyası
+
+```bash
+app.py
+```
+
+---
+
+# Kurulum
+
+## 1. Python Kurulumu
+
+Bilgisayarınızda Python 3.10+ kurulu olmalıdır.
+
+Kontrol etmek için terminal veya CMD açın:
+
+```bash
+python --version
+```
+
+veya
+
+```bash
+python3 --version
+```
+
+---
+
+# Gerekli Kütüphanelerin Kurulumu
+
+Terminal üzerinden aşağıdaki komutu çalıştırın:
+
+```bash
+pip install streamlit pandas numpy scikit-learn plotly openpyxl
+```
+
+---
+
+# Uygulamayı Başlatma
+
+Proje klasöründe terminal açın ve aşağıdaki komutu çalıştırın:
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# Tarayıcıda Açma
+
+Uygulama çalıştıktan sonra terminalde aşağıdaki gibi bir bağlantı oluşacaktır:
+
+```text
+Local URL: http://localhost:8501
+```
+
+Bu adresi tarayıcıda açarak uygulamayı kullanabilirsiniz.
+
+---
+
+# Excel Dosya Formatı
+
+Yüklenecek Excel dosyasında minimum şu sütunlar bulunmalıdır:
+
+```text
+Ürün Adı
+Stok Adedi
+```
+
+Opsiyonel:
+
+```text
+Satış Fiyatı (TL)
+```
+
+---
+
+# Sistem Modülleri
+
+## AI Talep Tahmini
+Linear Regression modeli ile gelecek satış tahmini oluşturulur.
+
+## EOQ Hesaplama
+Ekonomik sipariş miktarı hesaplanır.
+
+## Operasyonel Sağlık Skoru
+Ürünlerin risk seviyesi analiz edilir.
+
+## Finansal Etki Analizi
+Tahmini ciro ve stok maliyeti hesaplanır.
+
+## Senaryo Simülasyonu
+- Döviz kuru
+- Hava durumu
+- Sezon etkisi
+- Konut satış artışı
+
+gibi parametrelerle talep simülasyonu yapılır.
+
+---
+
+# Notlar
+
+- Uygulama demo amaçlı geliştirilmiştir.
+- Veriler gerçek zamanlı veri tabanı bağlantısı içermez.
+- Tahmin modeli örnek veri üzerinden çalışmaktadır.
+
+---
+
+# Gelecekte Eklenebilecek Özellikler
+
+- Gerçek AI modelleri
+- LSTM / Prophet tahmin sistemi
+- SQL veri tabanı entegrasyonu
+- Gerçek zamanlı ERP bağlantısı
+- PDF raporlama sistemi
+- Çoklu kullanıcı desteği
+- API entegrasyonu
+- Docker desteği
+
+---
+
+# Geliştirici
+
+Bu proje yapay zeka destekli operasyon yönetimi ve veri analizi pratiği amacıyla geliştirilmiştir.
