@@ -1,167 +1,212 @@
-# AI Tabanlı Talep Öngörü ve Akıllı Operasyon Merkezi
+# AI-Powered Demand Forecasting & Smart Operations Center
 
-Bu proje, Python ve Streamlit kullanılarak geliştirilmiş yapay zeka destekli bir operasyon ve stok analiz platformudur.
+## Description
 
-Uygulama; yüklenen Excel verileri üzerinden:
+AI-Powered Demand Forecasting & Smart Operations Center is an intelligent analytics platform designed to help businesses optimize inventory management, demand planning, and operational decision-making.
 
-- Stok analizi yapar
-- Talep tahmini oluşturur
-- AI destekli satış projeksiyonu sunar
-- EOQ (Ekonomik Sipariş Miktarı) hesaplar
-- Finansal etki analizi yapar
-- Operasyonel sağlık skoru üretir
-- Akıllı satın alma önerileri sunar
+Built with Python and Streamlit, the application enables users to upload Excel datasets and generate actionable insights through predictive analytics, inventory evaluation, financial impact assessments, and AI-assisted procurement recommendations.
 
----
+The platform combines statistical forecasting techniques with operational performance metrics to support data-driven business decisions.
 
-# Özellikler
+## Technologies
 
-- ✅ Excel tabanlı veri analizi
-- ✅ Yapay zeka destekli talep tahmini
-- ✅ Linear Regression modeli
-- ✅ EOQ hesaplama sistemi
-- ✅ Kritik stok analizi
-- ✅ Operasyonel sağlık skoru
-- ✅ Finansal etki analizi
-- ✅ AI satın alma takvimi
-- ✅ Plotly grafik desteği
-- ✅ Streamlit web arayüzü
+The project is built using the following technologies:
 
----
+* Python
+* Streamlit
+* Pandas
+* NumPy
+* Scikit-learn
+* Plotly
+* OpenPyXL
 
-# Kullanılan Teknolojiler
+## Features
 
-- Python
-- Streamlit
-- Pandas
-- NumPy
-- Scikit-learn
-- Plotly
+### Demand Forecasting
 
----
+* AI-assisted demand prediction
+* Future sales estimation
+* Trend-based forecasting models
+* Linear Regression analysis
 
-# Proje Dosyası
+### Inventory Management
+
+* Inventory level monitoring
+* Critical stock identification
+* Reorder planning support
+* Inventory optimization insights
+
+### EOQ (Economic Order Quantity)
+
+* Automated EOQ calculations
+* Order cost optimization
+* Inventory holding cost analysis
+
+### Financial Impact Analysis
+
+* Revenue projections
+* Inventory cost estimation
+* Business performance evaluation
+* Profitability insights
+
+### Operational Health Score
+
+* Operational risk assessment
+* Inventory efficiency evaluation
+* Product performance analysis
+* Overall operational scoring system
+
+### Smart Procurement Recommendations
+
+* AI-generated purchasing suggestions
+* Procurement scheduling support
+* Inventory replenishment recommendations
+
+### Interactive Data Visualization
+
+* Dynamic charts and dashboards
+* Plotly-powered visual analytics
+* Real-time KPI monitoring
+
+## Installation
+
+### Prerequisites
+
+Before running the application, ensure you have:
+
+* Python 3.10 or later
+* Required Python libraries installed
+
+### Clone the Repository
 
 ```bash
-app.py
+git clone https://github.com/your-username/ai-demand-forecasting-center.git
+
+cd ai-demand-forecasting-center
 ```
 
----
-
-# Kurulum
-
-## 1. Python Kurulumu
-
-Bilgisayarınızda Python 3.10+ kurulu olmalıdır.
-
-Kontrol etmek için terminal veya CMD açın:
-
-```bash
-python --version
-```
-
-veya
-
-```bash
-python3 --version
-```
-
----
-
-# Gerekli Kütüphanelerin Kurulumu
-
-Terminal üzerinden aşağıdaki komutu çalıştırın:
+### Install Dependencies
 
 ```bash
 pip install streamlit pandas numpy scikit-learn plotly openpyxl
 ```
 
----
-
-# Uygulamayı Başlatma
-
-Proje klasöründe terminal açın ve aşağıdaki komutu çalıştırın:
+### Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
----
+## Usage
 
-# Tarayıcıda Açma
+### Step 1: Launch the Application
 
-Uygulama çalıştıktan sonra terminalde aşağıdaki gibi bir bağlantı oluşacaktır:
+Start the Streamlit server and open the provided local URL in your browser.
+
+### Step 2: Upload an Excel File
+
+Upload an Excel file containing inventory and product information.
+
+### Step 3: Analyze Data
+
+The system automatically processes the uploaded dataset and generates:
+
+* Demand forecasts
+* Inventory evaluations
+* EOQ calculations
+* Financial impact reports
+* Operational health scores
+
+### Step 4: Review Insights
+
+Use the interactive dashboard to explore forecasts, recommendations, and operational metrics.
+
+## Supported Excel Format
+
+The uploaded Excel file should contain at least the following columns:
+
+### Required Fields
 
 ```text
-Local URL: http://localhost:8501
+Product Name
+Stock Quantity
 ```
 
-Bu adresi tarayıcıda açarak uygulamayı kullanabilirsiniz.
-
----
-
-# Excel Dosya Formatı
-
-Yüklenecek Excel dosyasında minimum şu sütunlar bulunmalıdır:
+### Optional Fields
 
 ```text
-Ürün Adı
-Stok Adedi
+Sales Price
 ```
 
-Opsiyonel:
+Additional fields can be included to enrich forecasting and analysis capabilities.
+
+## System Modules
+
+### Demand Forecasting Module
+
+Uses Linear Regression techniques to estimate future demand and sales trends based on available data.
+
+### EOQ Calculation Module
+
+Determines the optimal order quantity to minimize inventory and procurement costs.
+
+### Operational Health Assessment
+
+Analyzes inventory risks and operational efficiency to generate an overall health score.
+
+### Financial Impact Analysis
+
+Calculates projected revenue, inventory value, and potential business impact.
+
+### Scenario Simulation Engine
+
+Supports demand simulations based on various external factors, including:
+
+* Currency exchange fluctuations
+* Weather conditions
+* Seasonal effects
+* Housing market trends
+
+These simulations help organizations evaluate potential future scenarios and prepare strategic responses.
+
+## Project Structure
 
 ```text
-Satış Fiyatı (TL)
+project/
+│
+├── app.py
+├── requirements.txt
+└── README.md
 ```
 
----
+## Use Cases
 
-# Sistem Modülleri
+* Inventory Management
+* Supply Chain Optimization
+* Demand Planning
+* Procurement Analysis
+* Operations Management
+* Retail Analytics
+* Business Intelligence
+* Financial Forecasting
 
-## AI Talep Tahmini
-Linear Regression modeli ile gelecek satış tahmini oluşturulur.
+## Limitations
 
-## EOQ Hesaplama
-Ekonomik sipariş miktarı hesaplanır.
+* This project is intended for demonstration and educational purposes.
+* The forecasting model uses sample analytical methods and is not connected to live enterprise systems.
+* No real-time database integration is included in the current version.
 
-## Operasyonel Sağlık Skoru
-Ürünlerin risk seviyesi analiz edilir.
+## Future Improvements
 
-## Finansal Etki Analizi
-Tahmini ciro ve stok maliyeti hesaplanır.
+Potential future enhancements include:
 
-## Senaryo Simülasyonu
-- Döviz kuru
-- Hava durumu
-- Sezon etkisi
-- Konut satış artışı
-
-gibi parametrelerle talep simülasyonu yapılır.
-
----
-
-# Notlar
-
-- Uygulama demo amaçlı geliştirilmiştir.
-- Veriler gerçek zamanlı veri tabanı bağlantısı içermez.
-- Tahmin modeli örnek veri üzerinden çalışmaktadır.
-
----
-
-# Gelecekte Eklenebilecek Özellikler
-
-- Gerçek AI modelleri
-- LSTM / Prophet tahmin sistemi
-- SQL veri tabanı entegrasyonu
-- Gerçek zamanlı ERP bağlantısı
-- PDF raporlama sistemi
-- Çoklu kullanıcı desteği
-- API entegrasyonu
-- Docker desteği
-
----
-
-# Geliştirici
-
-Bu proje yapay zeka destekli operasyon yönetimi ve veri analizi pratiği amacıyla geliştirilmiştir.
+* Advanced AI forecasting models
+* LSTM-based demand prediction
+* Prophet forecasting integration
+* SQL database connectivity
+* ERP system integration
+* Automated PDF reporting
+* Multi-user authentication
+* REST API support
+* Docker deployment
+* Cloud infrastructure integration
